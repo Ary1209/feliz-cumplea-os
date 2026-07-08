@@ -250,5 +250,35 @@ body{
 }
 
 #musicBtn:hover{
+  
   background:rgba(255,255,255,.25);
+}
+
+
+
+
+/* Código especial para celulares */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem !important; /* Achica el título "Feliz cumpleaños" */
+    }
+    
+    h2, .edad { 
+        font-size: 1.5rem !important; /* Achica el "35 años" */
+    }
+
+    p, .texto {
+        font-size: 1rem !important; /* Hace el texto de felicitación más legible */
+        padding: 0 15px !important; /* Le da espacio a los lados para que no choque con la pantalla */
+    }
+
+    /* Si tu panda tiene una etiqueta img o una clase, esto evitará que se encime */
+    img, .panda {
+        max-width: 40% !important; /* Hace al panda un poco más pequeño en cel */
+        display: block !important;
+        margin: 20px auto !important; /* Le da espacio arriba y abajo para que no tape el texto */
+        position: relative !important; /* Lo acomoda en el flujo normal, no encima */
+        bottom: auto !important;
+        top: auto !important;
+    }
 }
