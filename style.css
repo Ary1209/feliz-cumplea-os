@@ -255,52 +255,78 @@ body{
 }
 
 
+/* --- CÓDIGO CORRECTO Y ORDENADO PARA CELULARES --- */
+@media (max-width: 600px) {
+  
+  /* Forzamos a que todo el fondo se ordene en una sola columna limpia */
+  .sky {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    height: 100vh !important;
+    overflow-y: auto !important; /* Si el texto es largo, permite deslizar hacia abajo */
+    padding: 20px 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 1. La Luna se queda fija arriba del todo */
+  .moon {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 10px auto 20px auto !important;
+    transform: none !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 2. Las letras van al medio con su tamaño ideal */
+  .message {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 20px !important; /* Le da espacio al panda para que no lo tape */
+    box-sizing: border-box !important;
+  }
+
+  .message h1 {
+    font-size: 26px !important;
+    margin-bottom: 5px !important;
+  }
+  .message h2 {
+    font-size: 20px !important;
+    margin-bottom: 15px !important;
+  }
+  .message p {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    padding: 0 10px !important;
+  }
+
+  /* 3. El Panda se va automáticamente ABAJO de las letras */
+  .panda {
+    position: relative !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    margin: 20px auto !important; /* Lo centra perfectamente horizontal */
+    transform: scale(0.55) !important; /* Lo achica un poco para que quepa bien */
+    transform-origin: center center !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* Botón de música flotante o abajo */
+  #musicBtn {
+    margin-top: auto !important;
+    margin-bottom: 10px !important;
+  }
+}
 
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feliz Cumpleaños 35 ❤️🐼</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="sky">
-    <div class="moon"></div>
-    <div class="stars"></div>
 
-    <div id="hearts"></div>
 
-    <div class="panda" id="panda">
-      <div class="ear left"></div>
-      <div class="ear right"></div>
-      <div class="face">
-        <div class="eye-patch left"><div class="eye"></div></div>
-        <div class="eye-patch right"><div class="eye"></div></div>
-        <div class="nose"></div>
-        <div class="mouth"></div>
-      </div>
-      <div class="body">
-        <div class="arm left"></div>
-        <div class="arm right"></div>
-        <div class="leg left"></div>
-        <div class="leg right"></div>
-      </div>
-    </div>
 
-    <div class="message">
-      <h1>Feliz cumpleaños 🎂</h1>
-      <h2>35 años</h2>
-      <p id="typed"></p>
-    </div>
 
-    <button id="musicBtn">🎵 Música</button>
-    <audio id="bgMusic" loop>
-      <source src="musica1,mp3.mp3" type="audio/mpeg">
-    </audio>
-  </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
