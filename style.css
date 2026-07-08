@@ -257,28 +257,50 @@ body{
 
 
 
-/* Código especial para celulares */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2rem !important; /* Achica el título "Feliz cumpleaños" */
-    }
-    
-    h2, .edad { 
-        font-size: 1.5rem !important; /* Achica el "35 años" */
-    }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Cumpleaños 35 ❤️🐼</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky">
+    <div class="moon"></div>
+    <div class="stars"></div>
 
-    p, .texto {
-        font-size: 1rem !important; /* Hace el texto de felicitación más legible */
-        padding: 0 15px !important; /* Le da espacio a los lados para que no choque con la pantalla */
-    }
+    <div id="hearts"></div>
 
-    /* Si tu panda tiene una etiqueta img o una clase, esto evitará que se encime */
-    img, .panda {
-        max-width: 40% !important; /* Hace al panda un poco más pequeño en cel */
-        display: block !important;
-        margin: 20px auto !important; /* Le da espacio arriba y abajo para que no tape el texto */
-        position: relative !important; /* Lo acomoda en el flujo normal, no encima */
-        bottom: auto !important;
-        top: auto !important;
-    }
-}
+    <div class="panda" id="panda">
+      <div class="ear left"></div>
+      <div class="ear right"></div>
+      <div class="face">
+        <div class="eye-patch left"><div class="eye"></div></div>
+        <div class="eye-patch right"><div class="eye"></div></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="body">
+        <div class="arm left"></div>
+        <div class="arm right"></div>
+        <div class="leg left"></div>
+        <div class="leg right"></div>
+      </div>
+    </div>
+
+    <div class="message">
+      <h1>Feliz cumpleaños 🎂</h1>
+      <h2>35 años</h2>
+      <p id="typed"></p>
+    </div>
+
+    <button id="musicBtn">🎵 Música</button>
+    <audio id="bgMusic" loop>
+      <source src="musica1,mp3.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
